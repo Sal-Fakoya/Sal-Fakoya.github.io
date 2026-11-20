@@ -1,0 +1,191 @@
+[
+  {
+    "objectID": "projects/jpmc-data-for-good/index.html#the-challenge",
+    "href": "projects/jpmc-data-for-good/index.html#the-challenge",
+    "title": "Data for Good Hackathon",
+    "section": "The challenge",
+    "text": "The challenge\nA nonprofit partner wanted to know what was driving student growth across its programs and which groups of students needed different kinds of support."
+  },
+  {
+    "objectID": "projects/jpmc-data-for-good/index.html#what-we-built",
+    "href": "projects/jpmc-data-for-good/index.html#what-we-built",
+    "title": "Data for Good Hackathon",
+    "section": "What we built",
+    "text": "What we built\nOur team of five combined regression, to estimate which factors were associated with growth, with k-means clustering, to group students with similar profiles. Together they pointed to specific segments and regions where an intervention would likely do the most good."
+  },
+  {
+    "objectID": "projects/jpmc-data-for-good/index.html#takeaway",
+    "href": "projects/jpmc-data-for-good/index.html#takeaway",
+    "title": "Data for Good Hackathon",
+    "section": "Takeaway",
+    "text": "Takeaway\nWorking against a hackathon clock with a real stakeholder pushed us to keep the analysis explainable: the output had to be something program staff could act on the next week.\n← Back to all projects"
+  },
+  {
+    "objectID": "projects/dog-breed-discovery/index.html#the-question",
+    "href": "projects/dog-breed-discovery/index.html#the-question",
+    "title": "Dog Breed Discovery",
+    "section": "The question",
+    "text": "The question\nFine-grained categories like dog breeds are expensive to label. We asked whether a model pretrained on generic images already “knows” breed structure well enough to cluster breeds correctly without seeing a single breed label."
+  },
+  {
+    "objectID": "projects/dog-breed-discovery/index.html#approach",
+    "href": "projects/dog-breed-discovery/index.html#approach",
+    "title": "Dog Breed Discovery",
+    "section": "Approach",
+    "text": "Approach\nWe used ResNet-18, VGG-16, ViT-B/16, and ViT-L/16 as frozen feature extractors across four datasets, clustered the embeddings, and scored the clusters against true breeds using the Adjusted Rand Index. We also tested whether extra preprocessing such as background removal helped."
+  },
+  {
+    "objectID": "projects/dog-breed-discovery/index.html#findings",
+    "href": "projects/dog-breed-discovery/index.html#findings",
+    "title": "Dog Breed Discovery",
+    "section": "Findings",
+    "text": "Findings\nVision Transformers won clearly, and we traced why: the CNNs pool foreground and background uniformly, so a dog photographed on grass ends up close to other grass photos. Attention lets the ViT focus on the animal itself. The advantage held across both cat and dog datasets."
+  },
+  {
+    "objectID": "projects/dog-breed-discovery/index.html#recommendation",
+    "href": "projects/dog-breed-discovery/index.html#recommendation",
+    "title": "Dog Breed Discovery",
+    "section": "Recommendation",
+    "text": "Recommendation\nDeploy a frozen Vision Transformer as is. No extra preprocessing and no fine-tuning were needed, which makes the improvement close to free in engineering cost.\n← Back to all projects"
+  },
+  {
+    "objectID": "projects/asktemoc/index.html#the-problem",
+    "href": "projects/asktemoc/index.html#the-problem",
+    "title": "AskTemoc",
+    "section": "The problem",
+    "text": "The problem\nAnswers to common student questions are spread across hundreds of catalog pages. AskTemoc lets students ask in plain language and get an answer grounded in the official catalog."
+  },
+  {
+    "objectID": "projects/asktemoc/index.html#my-part",
+    "href": "projects/asktemoc/index.html#my-part",
+    "title": "AskTemoc",
+    "section": "My part",
+    "text": "My part\nI work on retrieval. Catalog pages are crawled with Crawl4AI, split into 2,000+ chunks, embedded, and stored in PostgreSQL with pgvector. A FastAPI service retrieves the most relevant chunks and passes them to a local model served through Ollama."
+  },
+  {
+    "objectID": "projects/asktemoc/index.html#measuring-before-changing",
+    "href": "projects/asktemoc/index.html#measuring-before-changing",
+    "title": "AskTemoc",
+    "section": "Measuring before changing",
+    "text": "Measuring before changing\nI am designing the evaluation harness: precision@k and recall@k for whether the right chunks come back, MRR for whether they come back near the top, and faithfulness for whether the answer actually sticks to them. Any change, such as hybrid keyword plus vector search, has to beat the baseline on these before it ships."
+  },
+  {
+    "objectID": "projects/asktemoc/index.html#links",
+    "href": "projects/asktemoc/index.html#links",
+    "title": "AskTemoc",
+    "section": "Links",
+    "text": "Links\n\nLive app\nSource on GitHub\n\n← Back to all projects"
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Anime Watch Planner\n\n\n\nDatabricks\n\n\nLangGraph\n\n\nPySpark\n\n\nRecommender Systems\n\n\n\nAn LLM agent that helps a group decide what to watch, backed by a Spark pipeline, vector search over synopses, and a contextual bandit that learns the group’s taste.\n\n\n\nAugust 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDog Breed Discovery\n\n\n\nPyTorch\n\n\nVision Transformers\n\n\nComputer Vision\n\n\nClustering\n\n\n\nBenchmarked CNNs and Vision Transformers as frozen feature extractors for unsupervised breed clustering. ViTs reached 0.796 ARI, a 50% gain over the best CNN.\n\n\n\nMay 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIncome Classification for Credit Risk\n\n\n\nscikit-learn\n\n\nClassification\n\n\nCredit Risk\n\n\nModel Selection\n\n\n\nBenchmarked four classifiers on 32,561 census records and recommended logistic regression: within 0.001 AUC of a neural network, and interpretable enough for a regulated setting.\n\n\n\nApril 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCredit Card Balance Prediction\n\n\n\nR\n\n\nRegression\n\n\nStatistical Modeling\n\n\nTidyverse\n\n\n\nA regression model with 10-fold CV RMSE of $98 and 95.2% adjusted R², with multicollinearity diagnosed and fixed, and a decision-ready prediction interval.\n\n\n\nNovember 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData for Good Hackathon\n\n\n\nHackathon\n\n\nRegression\n\n\nK-Means\n\n\nSocial Impact\n\n\n\nWith four teammates, built a regression and clustering workflow over 3,000+ student records across 4 regions to show a nonprofit where to target interventions.\n\n\n\nOctober 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAskTemoc\n\n\n\nRAG\n\n\nFastAPI\n\n\npgvector\n\n\nEvaluation\n\n\n\nRetrieval and evaluation for a campus chatbot that answers student questions from 2,000+ chunks of scraped catalog content.\n\n\n\nAugust 2025\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "experience.html",
+    "href": "experience.html",
+    "title": "Experience",
+    "section": "",
+    "text": "Download the full resume (PDF)"
+  },
+  {
+    "objectID": "experience.html#experience-leadership",
+    "href": "experience.html#experience-leadership",
+    "title": "Experience",
+    "section": "Experience & leadership",
+    "text": "Experience & leadership\n\n\nApril 2026 – Present · Remote\nAI/ML Fellow, Income Classification Capstone\nBreak Through Tech · Cornell Tech\nBenchmarked logistic regression, a decision tree, KNN, and a neural network on 32,561 census records to test whether model complexity pays off for income-based credit risk estimation. After handling a 76/24 class imbalance, I recommended logistic regression (0.905 AUC) over the neural network (0.906 AUC) to keep the interpretability a regulated credit setting requires, and shipped an interactive presentation with separate business and technical narratives. Read more\n\n\nAugust 2025 – Present · Richardson, TX\nStudent Engineer, RAG Chatbot Development\nUT Dallas Artificial Intelligence Society · AskTemoc\nBuilding retrieval for a retrieval-augmented chatbot (FastAPI, Ollama, Crawl4AI, PostgreSQL/pgvector) that answers UT Dallas students’ questions from 2,000+ chunks of scraped catalog content. Designing the retrieval evaluation (precision@k, recall@k, MRR, faithfulness) that gates changes such as hybrid search. Read more"
+  },
+  {
+    "objectID": "experience.html#hackathons-competitions",
+    "href": "experience.html#hackathons-competitions",
+    "title": "Experience",
+    "section": "Hackathons & competitions",
+    "text": "Hackathons & competitions\n\n\nOctober 2025 · New York, NY\nMachine Learning Fellow\nData for Good Hackathon by JPMorgan Chase\nWorked with four other students to build a regression and clustering workflow that revealed drivers of student growth across 3,000+ records in 4 regions, enabling targeted interventions for the nonprofit stakeholder. Read more"
+  },
+  {
+    "objectID": "experience.html#education",
+    "href": "experience.html#education",
+    "title": "Experience",
+    "section": "Education",
+    "text": "Education\n\n\nExpected December 2027\nB.S. in Data Science\nThe University of Texas at Dallas · Richardson, TX\nRelevant coursework: Machine Learning, Statistical Learning, Natural Language Processing, Big Data Management, Numerical Statistical Computing, Probability and Statistics, Applied Linear Models, Database Management Systems, Data Analysis, Data Structures & Algorithms.\n\n\nCertificate\nMachine Learning Foundations\nCornell Tech"
+  },
+  {
+    "objectID": "experience.html#skills",
+    "href": "experience.html#skills",
+    "title": "Experience",
+    "section": "Skills",
+    "text": "Skills\nLanguages & tools\n\nPython R SQL (PostgreSQL) PySpark Excel Power BI HTML CSS / Tailwind\n\nLibraries\n\nNumPy pandas scikit-learn PyTorch Keras LangChain LangGraph Tidyverse\n\nMachine learning\n\nRegression Classification Tree ensembles Regularization Clustering Dimensionality reduction Contextual bandits Retrieval evaluation\n\nData & AI platforms\n\nDatabricks Spark Delta Lake Unity Catalog Lakebase Vector Search Databricks Apps pgvector"
+  },
+  {
+    "objectID": "projects/anime-watch-planner/index.html#the-problem",
+    "href": "projects/anime-watch-planner/index.html#the-problem",
+    "title": "Anime Watch Planner",
+    "section": "The problem",
+    "text": "The problem\nPicking something to watch with friends usually means scrolling for twenty minutes and settling. Most recommenders are built for one person. I wanted a planner that understands a group, lets people search by mood instead of exact titles, and gets better as the group rates what they watch."
+  },
+  {
+    "objectID": "projects/anime-watch-planner/index.html#what-i-built",
+    "href": "projects/anime-watch-planner/index.html#what-i-built",
+    "title": "Anime Watch Planner",
+    "section": "What I built",
+    "text": "What I built\nData pipeline. A PySpark job pulls 5,000+ titles from the AniList API, cleans and deduplicates them through Delta tables, and upserts them into a Lakebase (Postgres) store, so re-running the pipeline never creates duplicates. The schema covers users, groups, members, anime, ratings, watchlists, and recommendations.\nSemantic search. A Databricks Vector Search index over synopses, tags, and genres lets someone ask for “something cozy with found family” rather than needing to know a title.\nLearning group taste. A LinUCB contextual bandit scores titles for each group and updates from every rating, balancing what the group already likes against trying something new.\nThe agent. A LangGraph agent with 18 tools turns natural-language requests into tool calls that run parameterized SQL. One chat interface handles search, side-by-side comparison, watchlist management, and rating, with multi-turn memory. It is deployed as a Databricks App."
+  },
+  {
+    "objectID": "projects/anime-watch-planner/index.html#what-i-learned",
+    "href": "projects/anime-watch-planner/index.html#what-i-learned",
+    "title": "Anime Watch Planner",
+    "section": "What I learned",
+    "text": "What I learned\nKeeping the agent’s tools narrow and the SQL parameterized made it far more reliable than letting the model write queries. The bandit was the most satisfying piece: it is a small amount of math that makes the product feel like it is paying attention.\n← Back to all projects"
+  },
+  {
+    "objectID": "projects/credit-balance-prediction/index.html#the-goal",
+    "href": "projects/credit-balance-prediction/index.html#the-goal",
+    "title": "Credit Card Balance Prediction",
+    "section": "The goal",
+    "text": "The goal\nPredict a cardholder’s balance from attributes like income, credit limit, and rating, in a way an underwriter could rely on."
+  },
+  {
+    "objectID": "projects/credit-balance-prediction/index.html#what-i-did",
+    "href": "projects/credit-balance-prediction/index.html#what-i-did",
+    "title": "Credit Card Balance Prediction",
+    "section": "What I did",
+    "text": "What I did\nEvery modeling choice was checked against cross-validated error, not just in-sample fit, including which outliers to remove and which transformations to apply.\nCredit limit and rating turned out to be nearly the same variable (VIF of 76 to 79), which makes coefficients unstable. I resolved it by removing one of them and then confirmed the model stayed stable across 18 stepwise-selected variants."
+  },
+  {
+    "objectID": "projects/credit-balance-prediction/index.html#why-it-matters",
+    "href": "projects/credit-balance-prediction/index.html#why-it-matters",
+    "title": "Credit Card Balance Prediction",
+    "section": "Why it matters",
+    "text": "Why it matters\nA point prediction alone is hard to act on. Reporting a ±$196 interval at 95% confidence gives a decision maker a sense of how much to trust each estimate.\n← Back to all projects"
+  },
+  {
+    "objectID": "projects/income-classification/index.html#the-question",
+    "href": "projects/income-classification/index.html#the-question",
+    "title": "Income Classification for Credit Risk",
+    "section": "The question",
+    "text": "The question\nIncome is a common input to credit risk estimates. Using 32,561 census records, I tested whether a more complex model is worth it when the decision may need to be explained to a regulator or an applicant."
+  },
+  {
+    "objectID": "projects/income-classification/index.html#approach",
+    "href": "projects/income-classification/index.html#approach",
+    "title": "Income Classification for Credit Risk",
+    "section": "Approach",
+    "text": "Approach\nI compared logistic regression, a decision tree, k-nearest neighbors, and a neural network, and handled a 76/24 class imbalance so accuracy would not hide poor performance on the minority class."
+  },
+  {
+    "objectID": "projects/income-classification/index.html#recommendation",
+    "href": "projects/income-classification/index.html#recommendation",
+    "title": "Income Classification for Credit Risk",
+    "section": "Recommendation",
+    "text": "Recommendation\nThe neural network gained only 0.001 AUC. In a regulated credit context that is not worth giving up interpretability, so I recommended logistic regression, whose coefficients can be read and defended."
+  },
+  {
+    "objectID": "projects/income-classification/index.html#delivery",
+    "href": "projects/income-classification/index.html#delivery",
+    "title": "Income Classification for Credit Risk",
+    "section": "Delivery",
+    "text": "Delivery\nI shipped an interactive presentation with two tracks: a business narrative for decision makers and a technical narrative for reviewers who want the modeling details.\n← Back to all projects"
+  }
+]
